@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from "./connection/connection";
 import UserRoutes from './routes/user';
-import BlogRoutes from './routes/blog';
+import Blogroutes from './routes/blog';
 
 const PORT = process.env.PORT || 5000;
 
@@ -21,7 +21,7 @@ app.use(cors({ credentials: true }));
 
 // Define routes for user and blog APIs
 app.use('/api/user', UserRoutes);
-app.use('/api/blog', BlogRoutes);
+app.use('/api/blog', Blogroutes);
 
 // Start the server on the specified port
 app.listen(PORT, () => {
