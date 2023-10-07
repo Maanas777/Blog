@@ -14,8 +14,6 @@ declare global {
 }
 
 
-
-
 const getAuth = async (req:Request, res:Response, next:NextFunction) => {
     try {
       const token = req.headers.token as string;
